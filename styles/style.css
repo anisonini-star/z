@@ -22,7 +22,7 @@ body {
 /* Шапка сайта */
 #header {
     height: 90px;
-    background: #2a79bc url(images/header.png) no-repeat;
+    background: #2a79bc url(images/header.png);
 }
 
 /* Заголовок H1 в шапке */
