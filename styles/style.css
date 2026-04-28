@@ -1,49 +1,39 @@
-/* styles/style.css - Альтернативная версия */
+/* Обнуление отступов для всех элементов */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Общие стили для body */
+/* Стили для body */
 body {
-    background-color: #fff;
+    background: #fff;
     font-family: Verdana, Arial, sans-serif;
     font-size: 12px;
     line-height: 20px;
     color: #222;
-    margin: 20px;
 }
 
-/* Стили для основной таблицы-контейнера */
+/* Основной контейнер */
 #main {
+    margin: 20px auto;
     width: 800px;
-    border: 0px;
-    border-spacing: 0px;
-    margin: 0 auto;
-    background-color: #fff;
 }
 
-/* Стили для шапки */
+/* Шапка сайта */
 #header {
     height: 90px;
-    background-color: #2a79bc;
+    background: #2a79bc url(images/header.png) no-repeat;
 }
 
-/* Если нет изображения header.png, используем цвет */
-#header {
-    background: linear-gradient(135deg, #2a79bc 0%, #1a5a8c 100%);
-}
-
-/* Стили для заголовка H1 внутри шапки */
+/* Заголовок H1 в шапке */
 #header h1 {
     font-size: 28px;
     letter-spacing: -1px;
-    padding: 25px 0 0 20px;
-    margin: 0;
+    padding: 20px 0 0 20px;
+    color: #FF5500;
 }
 
-/* Стили для ссылки внутри заголовка H1 */
+/* Ссылки в заголовке H1 */
 #header h1 a {
     color: #fff;
     text-decoration: none;
@@ -52,44 +42,40 @@ body {
 }
 
 #header h1 a:hover {
-    color: #FFD700;
-    text-decoration: none;
+    color: #111;
 }
 
-/* Стили для левой колонки (навигация) */
+/* Контейнер контента */
+#content {
+    padding: 0px 0 0 0px;
+}
+
+/* Левая колонка (меню) */
 #left {
+    float: left;
     width: 180px;
-    padding: 10px 0 10px 0;
-    vertical-align: top;
-    background-color: #f9f9f9;
+    padding-top: 10px;
 }
 
-/* Стили для заголовков H2 в левой колонке */
+/* Заголовки H2 в левой колонке */
 #left h2 {
+    margin: 10px 0 0 0;
+    padding-left: 10px;
     height: 30px;
     line-height: 30px;
-    background-color: #2a79bc;
+    background: #2a79bc url(images/menu.png) no-repeat;
     color: #fff;
     font-size: 13px;
-    text-align: center;
-    margin: 10px 0 5px 0;
-    font-weight: bold;
 }
 
-/* Стили для списков в левой колонке */
+/* Списки в левой колонке */
 #left ul {
+    padding: 10px 0 15px 10px;
     list-style-type: square;
     color: #2979BD;
     padding-left: 30px;
-    font-size: 13px;
-    margin: 5px 0 15px 0;
 }
 
-#left ul li {
-    margin: 3px 0;
-}
-
-/* Стили для ссылок в списках левой колонки */
 #left ul li a {
     text-decoration: none;
     font-weight: 600;
@@ -101,21 +87,25 @@ body {
     color: #2a52be;
 }
 
-/* Стили для формы в левой колонке */
+/* Форма в левой колонке */
 #left form {
+    padding-left: 10px;
+    padding-bottom: 15px;
     color: #2979BD;
-    font-size: 13px;
     font-weight: 600;
-    padding: 0 0 10px 10px;
 }
 
-#left form input {
-    margin: 3px 0;
+#left form div {
+    margin: 5px 0;
+}
+
+#left input[type="text"],
+#left input[type="password"] {
+    width: 150px;
     padding: 2px;
 }
 
-#left form input[type="submit"] {
-    margin-top: 5px;
+#left input[type="submit"] {
     padding: 2px 10px;
     background-color: #2a79bc;
     color: white;
@@ -123,35 +113,97 @@ body {
     cursor: pointer;
 }
 
-#left form input[type="submit"]:hover {
+#left input[type="submit"]:hover {
     background-color: #1a5a8c;
 }
 
-/* Стили для блока контента */
-#content {
+/* Правая колонка (контент) */
+#right {
+    float: right;
+    width: 590px;
     text-align: justify;
-    padding: 15px 10px 10px 15px;
-    vertical-align: top;
-    background-color: #fff;
+    padding-top: 5px;
 }
 
-/* Стили для заголовков H2 в контенте */
-#content h2 {
+#right h2 {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 100;
+    padding: 15px 0 7px 0;
     color: #2a79bc;
-    margin: 0 0 15px 0;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #2a79bc;
+    border-bottom: 1px solid #ddd;
 }
 
-#content h3 {
+#right h2 a {
+    text-decoration: none;
+}
+
+#right h3 {
     font-size: 16px;
     color: #1a5a8c;
     margin: 15px 0 5px 0;
 }
 
-/* Стили для подвала */
+#right p {
+    margin: 5px 0;
+}
+
+#right ul {
+    margin: 5px 0 5px 20px;
+}
+
+#right ul li {
+    margin: 3px 0;
+}
+
+/* Стили для новостей */
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h3 {
+    margin: 10px 0 5px 0;
+}
+
+.news-item h3 a {
+    text-decoration: none;
+    color: #2a79bc;
+}
+
+.news-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-date {
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+    margin: 0 0 5px 0;
+}
+
+/* Стили для контактов */
+.contact-block {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #2a79bc;
+}
+
+.contact-block h3 {
+    margin: 0 0 5px 0;
+    color: #2a79bc;
+}
+
+.contact-block p {
+    margin: 5px 0;
+}
+
+/* Подвал */
 #footer {
     text-align: center;
     font-size: 11px;
@@ -159,15 +211,14 @@ body {
     margin-top: 20px;
     border-top: 1px dotted #0047ab;
     padding: 10px 0;
-    background-color: #f9f9f9;
+    clear: both;
 }
 
-/* Стили для ссылок в подвале */
 #footer a {
     color: #0047ab;
 }
 
-/* Общие стили для всех ссылок на странице */
+/* Общие стили для ссылок */
 a {
     text-decoration: none;
     color: #4682B4;
@@ -176,35 +227,4 @@ a {
 a:hover {
     text-decoration: underline;
     color: #2a52be;
-}
-
-/* Стили для новостей */
-.news-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.news-item:last-child {
-    border-bottom: none;
-}
-
-.news-date {
-    font-size: 11px;
-    color: #888;
-    font-style: italic;
-    margin: 5px 0;
-}
-
-/* Стили для контактов */
-#content ul {
-    margin: 10px 0 10px 20px;
-}
-
-#content ul li {
-    margin: 5px 0;
-}
-
-strong {
-    color: #2a79bc;
 }
