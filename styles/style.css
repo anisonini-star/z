@@ -1,107 +1,115 @@
 /* Общие стили для body */
 body {
-	background-color: #fff; 
-	font-family: Verdana, Arial; 
-	font-size: 12px; 
-	line-height: 20px; 
-	color: #222;
+    background-color: #fff;
+    font-family: Verdana, Arial;
+    font-size: 12px;
+    line-height: 20px;
+    color: #222;
+    margin: 20px;
 }
 
 /* Стили для основной таблицы-контейнера */
 #main {
-    width: 800px; 
-    border: 0px; 
-    align: center; 
-    border-spacing: 0px; 
+    width: 800px;
+    border: 0px;
+    align: center;
+    border-spacing: 0px;
+    margin: 0 auto; /* Для центрирования таблицы в body */
 }
 
 /* Стили для шапки */
 #header {
-    height: 90px; 
-    background-image: url(images/header.png); 
-    background-repeat: no-repeat; 
-    background-color: #2a79bc; 
+    height: 90px;
+    background-image: url(images/header.png);
+    background-repeat: no-repeat;
+    background-color: #2a79bc;
 }
 
 /* Стили для заголовка H1 внутри шапки */
-#header h1 {  
-     font-size: 28px; 
-     letter-spacing: -1px; 
-     padding: 20px 0 0 20px; 
-     color: #FF5500; 
-  }
+#header h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    padding: 20px 0 0 20px;
+    color: #FF5500;
+}
 
 /* Стили для ссылки внутри заголовка H1 */
-#header h1 a {  
-    color: #fff; 
-    text-decoration: none; 
-    font-weight: 100; 
-    letter-spacing: -2px; 
-  } 
- 
-#header h1 a:hover { 
-    color: #111; 
-  }
+#header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+#header h1 a:hover {
+    color: #111;
+}
 
 /* Стили для левой колонки (навигация) */
 #left {
-    height: 30px; 
-    line-height: 30px; 
-    background-color: #2a79bc; 
-    background-image: url(images/menu.png); 
-    background-repeat: no-repeat; 
-    color: #fff; 
-    font-size: 13px; 
-    text-align: center;
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: top;
 }
 
 /* Стили для заголовков H2 в левой колонке */
-#left ul  { 
-    list-style-type: square; 
-    color: #2979BD; 
-    padding-left: 30px; 
-    font-size: 13px; 
-  } 
-   
-  #left ul li a { 
-    text-decoration: none; 
-    font-weight: 600; 
-  } 
-   
-#left ul li a:hover { 
- 
-  } 
-   
-#left form { 
-    color: #2979BD; 
-    font-size: 13px; 
-    font-weight: 600; 
-    padding-left: 10px; 
-  }
+#left h2 {
+    height: 30px;
+    line-height: 30px;
+    background-color: #2a79bc;
+    background-image: url(images/menu.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Стили для списков в левой колонке */
+#left ul {
+    list-style-type: square;
+    color: #2979BD;
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+/* Стили для ссылок в списках левой колонки */
+#left ul li a {
+    text-decoration: none;
+    font-weight: 600;
+}
+#left ul li a:hover {
+    text-decoration: underline;
+    color: #2a52be;
+}
+
+/* Стили для формы в левой колонке */
+#left form {
+    color: #2979BD;
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 10px;
+}
 
 /* Стили для блока контента */
-#content { 
-    text-align: justify; 
-    padding-top: 15px; 
-    padding-left: 10px; 
-    padding-bottom: 10px; 
-    padding-right: 5px; 
-    vertical-align: top; 
-  } 
- 
-#content h2 { 
-    font-size: 18px; 
-    font-weight: 100; 
-     
-  } 
- 
-#content h2 a { 
-   text-decoration: none; 
-  } 
- 
-#content h2 a:hover { 
- 
-  }
+#content {
+    text-align: justify;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+/* Стили для заголовков H2 в контенте */
+#content h2 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #2a79bc;
+    margin-top: 0;
+}
+
 /* Стили для подвала */
 #footer {
     text-align: center;
@@ -128,16 +136,6 @@ a:hover {
     color: #2a52be;
 }
 
-#footer { 
-    text-align: center; 
-    font-size: 11px; 
-    color: #0047ab; 
-    margin-top: 20px; 
-    border-top: 1px dotted #0047ab; 
-  } 
- #footer a { 
-    color: #0047ab;  
-  } 
 /* Дополнительные стили для страницы новостей */
 .news-item {
     margin-bottom: 20px;
