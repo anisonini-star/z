@@ -1,7 +1,14 @@
+/* styles/style.css - Альтернативная версия */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Общие стили для body */
 body {
     background-color: #fff;
-    font-family: Verdana, Arial;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 12px;
     line-height: 20px;
     color: #222;
@@ -14,22 +21,26 @@ body {
     border: 0px;
     border-spacing: 0px;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 /* Стили для шапки */
 #header {
     height: 90px;
-    background-image: url(images/header.png);
-    background-repeat: no-repeat;
     background-color: #2a79bc;
+}
+
+/* Если нет изображения header.png, используем цвет */
+#header {
+    background: linear-gradient(135deg, #2a79bc 0%, #1a5a8c 100%);
 }
 
 /* Стили для заголовка H1 внутри шапки */
 #header h1 {
     font-size: 28px;
     letter-spacing: -1px;
-    padding: 20px 0 0 20px;
-    color: #FF5500;
+    padding: 25px 0 0 20px;
+    margin: 0;
 }
 
 /* Стили для ссылки внутри заголовка H1 */
@@ -39,16 +50,18 @@ body {
     font-weight: 100;
     letter-spacing: -2px;
 }
+
 #header h1 a:hover {
-    color: #111;
+    color: #FFD700;
+    text-decoration: none;
 }
 
 /* Стили для левой колонки (навигация) */
 #left {
     width: 180px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
     vertical-align: top;
+    background-color: #f9f9f9;
 }
 
 /* Стили для заголовков H2 в левой колонке */
@@ -56,13 +69,11 @@ body {
     height: 30px;
     line-height: 30px;
     background-color: #2a79bc;
-    background-image: url(images/menu.png);
-    background-repeat: no-repeat;
     color: #fff;
     font-size: 13px;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
 }
 
 /* Стили для списков в левой колонке */
@@ -71,13 +82,20 @@ body {
     color: #2979BD;
     padding-left: 30px;
     font-size: 13px;
+    margin: 5px 0 15px 0;
+}
+
+#left ul li {
+    margin: 3px 0;
 }
 
 /* Стили для ссылок в списках левой колонки */
 #left ul li a {
     text-decoration: none;
     font-weight: 600;
+    color: #4682B4;
 }
+
 #left ul li a:hover {
     text-decoration: underline;
     color: #2a52be;
@@ -88,25 +106,49 @@ body {
     color: #2979BD;
     font-size: 13px;
     font-weight: 600;
-    padding-left: 10px;
+    padding: 0 0 10px 10px;
+}
+
+#left form input {
+    margin: 3px 0;
+    padding: 2px;
+}
+
+#left form input[type="submit"] {
+    margin-top: 5px;
+    padding: 2px 10px;
+    background-color: #2a79bc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#left form input[type="submit"]:hover {
+    background-color: #1a5a8c;
 }
 
 /* Стили для блока контента */
 #content {
     text-align: justify;
-    padding-top: 15px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 5px;
+    padding: 15px 10px 10px 15px;
     vertical-align: top;
+    background-color: #fff;
 }
 
 /* Стили для заголовков H2 в контенте */
 #content h2 {
     font-size: 18px;
-    font-weight: 100;
+    font-weight: bold;
     color: #2a79bc;
-    margin-top: 0;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2a79bc;
+}
+
+#content h3 {
+    font-size: 16px;
+    color: #1a5a8c;
+    margin: 15px 0 5px 0;
 }
 
 /* Стили для подвала */
@@ -116,8 +158,8 @@ body {
     color: #0047ab;
     margin-top: 20px;
     border-top: 1px dotted #0047ab;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
+    background-color: #f9f9f9;
 }
 
 /* Стили для ссылок в подвале */
@@ -130,28 +172,39 @@ a {
     text-decoration: none;
     color: #4682B4;
 }
+
 a:hover {
     text-decoration: underline;
     color: #2a52be;
 }
 
-/* Дополнительные стили для страницы новостей */
+/* Стили для новостей */
 .news-item {
     margin-bottom: 20px;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-.news-item h3 {
-    font-size: 16px;
-    color: #2a79bc;
-    margin-bottom: 5px;
+.news-item:last-child {
+    border-bottom: none;
 }
 
 .news-date {
-    font-size: 10px;
-    color: #777;
-    margin-top: 0;
-    margin-bottom: 5px;
+    font-size: 11px;
+    color: #888;
     font-style: italic;
+    margin: 5px 0;
+}
+
+/* Стили для контактов */
+#content ul {
+    margin: 10px 0 10px 20px;
+}
+
+#content ul li {
+    margin: 5px 0;
+}
+
+strong {
+    color: #2a79bc;
 }
