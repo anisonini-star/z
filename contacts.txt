@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="author" content="Студент Иванов И.И.">
+    <meta name="keywords" content="сайт, первый сайт, табличная верстка, контакты">
+    <meta name="description" content="Контактная информация моего первого простого сайта">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Контакты - Мой первый простой сайт</title>
+    <base href="http://172.16.50.28/user01/lab3/">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<table id="main" align="center">
+    <tr>
+        <td colspan="2" id="header">
+            <h1><a href="index.html">Мой первый простой сайт</a></h1>
+        </td>
+    </tr>
+    <tr>
+        <td id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <h2>Ссылки</h2>
+            <ul>
+                <li><a href="http://yandex.ua" target="_blank">Яндекс</a></li>
+                <li><a href="http://google.com.ua" target="_blank">Google</a></li>
+            </ul>
+            <h2>Вход</h2>
+            <form action="index.html" method="post">
+                Пользователь:
+                <div align="right"><input name="login" type="text"></div>
+                Пароль:
+                <div align="right"><input name="pwd" type="password"></div>
+                <div align="right"><input name="ok" type="submit" value="Войти"></div>
+            </form>
+        </td>
+        <td id="content">
+            <h2>Контакты</h2>
+            <p>Вы можете связаться со мной следующими способами:</p>
+            <ul>
+                <li>Email: ivanov@example.com</li>
+                <li>Телефон: +7 (123) 456-78-90</li>
+                <li>Адрес: г. Москва, ул. Примерная, д. 1</li>
+            </ul>
+            <p>Также вы можете оставить сообщение через форму обратной связи (в разработке).</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" id="footer">
+            &copy; 2025, Иванов Иван Иванович
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
