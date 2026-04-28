@@ -2,24 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Студент Иванов И.И.">
-    <meta name="keywords" content="лабораторная, сайт, html, css, новости">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="keywords" content="лабораторная, блочная верстка, новости, html, css">
     <meta name="description" content="Новости моего первого простого сайта">
     <meta http-equiv="content-type" content="text/html">
     <title>Новости - Мой первый простой сайт</title>
-    <base href="http://anisonini-star.github.io/z/">
+    <base href="https://anisonini-star.github.io/z/">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 
-<table id="main" align="center">
-    <tr>
-        <td colspan="2" id="header">
-            <h1><a href="index.html">Мой первый простой сайт</a></h1>
-        </td>
-    </tr>
-    <tr>
-        <td id="left">
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
             <h2>Навигация</h2>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -39,32 +38,37 @@
                 <div align="right"><input name="pwd" type="password"></div>
                 <div align="right"><input name="ok" type="submit" value="Войти"></div>
             </form>
-        </td>
-        <td id="content">
+        </div>
+        
+        <div id="right">
             <h2>Новости</h2>
+            
             <div class="news-item">
-                <h3>Успешное завершение лабораторной работы №2</h3>
+                <h3><a href="#">Успешное завершение лабораторной работы №3</a></h3>
+                <p class="news-date">20.10.2024</p>
+                <p>Все студенты успешно справились с заданиями третьей лабораторной работы, посвященной табличной верстке. Результаты уже доступны в электронном журнале.</p>
+            </div>
+            
+            <div class="news-item">
+                <h3><a href="#">Начало изучения блочной верстки</a></h3>
                 <p class="news-date">15.10.2024</p>
-                <p>Все студенты успешно справились с заданиями второй лабораторной работы. Тематика была посвящена основам HTML. Результаты уже доступны в журнале.</p>
+                <p>На этой неделе мы приступаем к освоению современной блочной верстки с использованием тегов div и каскадных таблиц стилей (CSS). Блочная верстка является стандартом современного веб-дизайна.</p>
             </div>
+            
             <div class="news-item">
-                <h3>Старт изучения CSS</h3>
+                <h3><a href="#">Обновление расписания консультаций</a></h3>
                 <p class="news-date">10.10.2024</p>
-                <p>На лекции были рассмотрены основные принципы каскадных таблиц стилей, селекторы и способы подключения CSS к HTML-документам.</p>
+                <p>Обращаем внимание студентов на изменение расписания консультаций по веб-технологиям. Консультации будут проходить по вторникам и четвергам с 15:00 до 17:00 в аудитории 301.</p>
             </div>
-            <div class="news-item">
-                <h3>Обновление расписания консультаций</h3>
-                <p class="news-date">05.10.2024</p>
-                <p>С этого месяца консультации по веб-технологиям будут проходить по вторникам и четвергам с 15:00 до 17:00 в аудитории 301.</p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" id="footer">
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
             &copy; 2024 Иванов Иван Иванович
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
