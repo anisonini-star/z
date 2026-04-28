@@ -12,9 +12,8 @@ body {
 #main {
     width: 800px;
     border: 0px;
-    align: center;
     border-spacing: 0px;
-    margin: 0 auto; /* Для центрирования таблицы в body */
+    margin: 0 auto;
 }
 
 /* Стили для шапки */
