@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Студент Иванов И.И.">
+    <meta name="keywords" content="лабораторная, сайт, html, css, контакты">
+    <meta name="description" content="Контактная информация">
+    <meta http-equiv="content-type" content="text/html">
+    <title>Контакты - Мой первый простой сайт</title>
+    <base href="http://172.16.50.28/user01/lab3/">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<table id="main" align="center">
+    <tr>
+        <td colspan="2" id="header">
+            <h1><a href="index.html">Мой первый простой сайт</a></h1>
+        </td>
+    </tr>
+    <tr>
+        <td id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <h2>Ссылки</h2>
+            <ul>
+                <li><a href="http://yandex.ua" target="_blank">Яндекс</a></li>
+                <li><a href="http://google.com.ua" target="_blank">Google</a></li>
+            </ul>
+            <h2>Вход</h2>
+            <form action="index.html" method="post">
+                Пользователь:
+                <div align="right"><input name="login" type="text"></div>
+                Пароль:
+                <div align="right"><input name="pwd" type="password"></div>
+                <div align="right"><input name="ok" type="submit" value="Войти"></div>
+            </form>
+        </td>
+        <td id="content">
+            <h2>Контактная информация</h2>
+            <p>Вы можете связаться со мной любым удобным способом:</p>
+            <ul>
+                <li><strong>Email:</strong> ivan.ivanov@example.com</li>
+                <li><strong>Телефон:</strong> +38 (099) 123-45-67</li>
+                <li><strong>Адрес:</strong> г. Киев, ул. Пушкина, 10, каб. 405</li>
+            </ul>
+            <p>Также вы можете найти меня в социальных сетях:</p>
+            <ul>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+            <p>Время для связи: будние дни с 10:00 до 18:00.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

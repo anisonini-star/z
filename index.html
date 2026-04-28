@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Студент Иванов И.И.">
+    <meta name="keywords" content="лабораторная, сайт, html, css">
+    <meta name="description" content="Мой первый простой сайт, созданный в рамках лабораторной работы">
+    <meta http-equiv="content-type" content="text/html">
+    <title>Мой первый простой сайт</title>
+    <base href="http://172.16.50.28/user01/lab3/">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<table id="main" align="center">
+    <tr>
+        <td colspan="2" id="header">
+            <h1><a href="index.html">Мой первый простой сайт</a></h1>
+        </td>
+    </tr>
+    <tr>
+        <td id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <h2>Ссылки</h2>
+            <ul>
+                <li><a href="http://yandex.ua" target="_blank">Яндекс</a></li>
+                <li><a href="http://google.com.ua" target="_blank">Google</a></li>
+            </ul>
+            <h2>Вход</h2>
+            <form action="index.html" method="post">
+                Пользователь:
+                <div align="right"><input name="login" type="text"></div>
+                Пароль:
+                <div align="right"><input name="pwd" type="password"></div>
+                <div align="right"><input name="ok" type="submit" value="Войти"></div>
+            </form>
+        </td>
+        <td id="content">
+            <h2>Добро пожаловать!</h2>
+            <p>Это главная страница моего первого простого сайта. Здесь может быть размещена любая информация, которую я хочу донести до посетителей.</p>
+            <p>В рамках данной лабораторной работы мы осваиваем верстку с использованием таблиц, а также учимся подключать и применять каскадные таблицы стилей (CSS).</p>
+            <p>Табличная верстка позволяет гибко управлять структурой страницы, разделяя её на логические блоки: шапку, меню, контент и подвал. С помощью CSS мы задаем внешний вид этим блокам, делая сайт привлекательным и удобным для чтения.</p>
+            <p>В дальнейшем планируется наполнение сайта новостями и контактной информацией.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
