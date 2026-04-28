@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Студент Корнющенко м.А.">
-    <meta name="keywords" content="лабораторная, сайт, html, css, контакты">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="keywords" content="лабораторная, блочная верстка, контакты, html, css">
     <meta name="description" content="Контактная информация">
     <meta http-equiv="content-type" content="text/html">
     <title>Контакты - Мой первый простой сайт</title>
@@ -11,14 +11,13 @@
 </head>
 <body>
 
-<table id="main" align="center">
-    <tr>
-        <td colspan="2" id="header">
-            <h1><a href="index.html">Мой первый простой сайт</a></h1>
-        </td>
-    </tr>
-    <tr>
-        <td id="left">
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
             <h2>Навигация</h2>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -38,29 +37,50 @@
                 <div align="right"><input name="pwd" type="password"></div>
                 <div align="right"><input name="ok" type="submit" value="Войти"></div>
             </form>
-        </td>
-        <td id="content">
+        </div>
+        
+        <div id="right">
             <h2>Контактная информация</h2>
             <p>Вы можете связаться со мной любым удобным способом:</p>
-            <ul>
-                <li><strong>Email:</strong> ivan.ivanov@example.com</li>
-                <li><strong>Телефон:</strong> +38 (099) 123-45-67</li>
-                <li><strong>Адрес:</strong> г. Киев, ул. Пушкина, 10, каб. 405</li>
-            </ul>
-            <p>Также вы можете найти меня в социальных сетях:</p>
-            <ul>
-                <li><a href="#">Telegram</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
-            <p>Время для связи: будние дни с 10:00 до 18:00.</p>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" id="footer">
-            &copy; 2025 Корнющенко МюАю
-        </td>
-    </tr>
-</table>
+            
+            <div class="contact-block">
+                <h3>Электронная почта</h3>
+                <p><a href="mailto:ivan.ivanov@example.com">ivan.ivanov@example.com</a></p>
+            </div>
+            
+            <div class="contact-block">
+                <h3>Телефон</h3>
+                <p>+38 (099) 123-45-67</p>
+            </div>
+            
+            <div class="contact-block">
+                <h3>Адрес</h3>
+                <p>г. Киев, ул. Пушкина, 10, каб. 405</p>
+            </div>
+            
+            <div class="contact-block">
+                <h3>Социальные сети</h3>
+                <ul>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact-block">
+                <h3>Время для связи</h3>
+                <p>Будние дни: 10:00 - 18:00</p>
+                <p>Выходные: выходной</p>
+            </div>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
