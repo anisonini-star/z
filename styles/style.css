@@ -22,7 +22,7 @@ body {
 /* Шапка сайта */
 #header {
     height: 90px;
-    background: #2a79bc url(images/header.png);
+    background: #2a79bc;
 }
 
 /* Заголовок H1 в шапке */
@@ -63,7 +63,7 @@ body {
     padding-left: 10px;
     height: 30px;
     line-height: 30px;
-    background: #2a79bc url(images/menu.png) no-repeat;
+    background: #2a79bc;
     color: #fff;
     font-size: 13px;
 }
@@ -123,6 +123,7 @@ body {
     width: 590px;
     text-align: justify;
     padding-top: 5px;
+    padding-bottom: 20px;
 }
 
 #right h2 {
@@ -133,74 +134,46 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-#right h2 a {
-    text-decoration: none;
-}
-
-#right h3 {
-    font-size: 16px;
-    color: #1a5a8c;
-    margin: 15px 0 5px 0;
-}
-
 #right p {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 #right ul {
-    margin: 5px 0 5px 20px;
+    margin: 10px 0 10px 20px;
 }
 
 #right ul li {
-    margin: 3px 0;
-}
-
-/* Стили для новостей */
-.news-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
-}
-
-.news-item:last-child {
-    border-bottom: none;
-}
-
-.news-item h3 {
-    margin: 10px 0 5px 0;
-}
-
-.news-item h3 a {
-    text-decoration: none;
-    color: #2a79bc;
-}
-
-.news-item h3 a:hover {
-    text-decoration: underline;
-}
-
-.news-date {
-    font-size: 11px;
-    color: #888;
-    font-style: italic;
-    margin: 0 0 5px 0;
-}
-
-/* Стили для контактов */
-.contact-block {
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-left: 3px solid #2a79bc;
-}
-
-.contact-block h3 {
-    margin: 0 0 5px 0;
-    color: #2a79bc;
-}
-
-.contact-block p {
     margin: 5px 0;
+}
+
+/* Стили для таблиц калькулятора */
+#right table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#right table td {
+    padding: 5px;
+    text-align: center;
+}
+
+#right input[type="button"] {
+    padding: 5px 10px;
+    background-color: #2a79bc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#right input[type="button"]:hover {
+    background-color: #1a5a8c;
+}
+
+#right input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 /* Подвал */
@@ -212,10 +185,6 @@ body {
     border-top: 1px dotted #0047ab;
     padding: 10px 0;
     clear: both;
-}
-
-#footer a {
-    color: #0047ab;
 }
 
 /* Общие стили для ссылок */
