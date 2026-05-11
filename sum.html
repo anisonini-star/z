@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="keywords" content="сумматор, javascript, форма">
+    <meta name="description" content="Страница для суммирования двух чисел">
+    <title>Сумматор - Мой первый простой сайт</title>
+    <base href="http://172.16.50.28/user01/lab5/">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <script type="text/javascript">
+        function exit() {
+            if (confirm("Закрыть окно?")) {
+                window.close();
+            }
+        }
+        
+        function calculate() {
+            var num1 = +window.document.form1.T1.value;
+            var num2 = +window.document.form1.T2.value;
+            window.document.form1.T3.value = num1 + num2;
+        }
+    </script>
+</head>
+<body>
+
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="secret.html">Секретная страница</a></li>
+                <li><a href="sum.html">Сумматор</a></li>
+                <li><a href="calculator.html">Web-калькулятор</a></li>
+            </ul>
+        </div>
+        
+        <div id="right">
+            <h2>Сумматор</h2>
+            
+            <form name="form1" style="text-align: center; padding: 20px;">
+                <table align="center" border="0" cellpadding="10">
+                    <tr>
+                        <td>Число 1:</td>
+                        <td><input type="text" name="T1" size="10" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Число 2:</td>
+                        <td><input type="text" name="T2" size="10" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Сумма:</td>
+                        <td><input type="text" name="T3" size="10" value="0" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" value="Рассчитать" onclick="calculate()">
+                            <input type="reset" value="Очистить">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" value="Закрыть" name="B2" onclick="exit()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

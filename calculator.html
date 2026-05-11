@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Иванов Иван Иванович">
+    <meta name="keywords" content="калькулятор, math, javascript">
+    <meta name="description" content="Web-калькулятор с математическими функциями">
+    <title>Web-калькулятор - Мой первый простой сайт</title>
+    <base href="http://172.16.50.28/user01/lab5/">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <script type="text/javascript" src="scripts/script.js"></script>
+    
+    <script type="text/javascript">
+        // Дополнительные функции для работы с формой
+        function steer() {
+            window.document.form1.T1.value = 0;
+            window.document.form1.T2.value = 0;
+            window.document.form1.T3.value = 0;
+            window.document.form1.T1.focus();
+            window.document.form1.T1.select();
+        }
+    </script>
+</head>
+<body>
+
+<div id="main">
+    <div id="header">
+        <h1><a href="index.html">Мой первый простой сайт</a></h1>
+    </div>
+    
+    <div id="content">
+        <div id="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="secret.html">Секретная страница</a></li>
+                <li><a href="sum.html">Сумматор</a></li>
+                <li><a href="calculator.html">Web-калькулятор</a></li>
+            </ul>
+        </div>
+        
+        <div id="right">
+            <h2>Web-калькулятор</h2>
+            
+            <form name="form1" style="text-align: center;">
+                <table align="center" width="50%" border="1" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <td colspan="4" align="center"><strong>Математический калькулятор</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Аргумент 1:</td>
+                        <td colspan="3"><input type="text" name="T1" size="20" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Аргумент 2:</td>
+                        <td colspan="3"><input type="text" name="T2" size="20" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>Результат:</td>
+                        <td colspan="3"><input type="text" name="T3" size="20" value="0"></td>
+                    </tr>
+                    
+                    <!-- Базовые операции -->
+                    <tr align="center">
+                        <td><input type="button" value="+" onclick="plus()"></td>
+                        <td><input type="button" value="-" onclick="minus()"></td>
+                        <td><input type="button" value="*" onclick="proizv()"></td>
+                        <td><input type="button" value="/" onclick="delen()"></td>
+                    </tr>
+                    
+                    <!-- Степень и модуль -->
+                    <tr align="center">
+                        <td><input type="button" value="x^y" onclick="stepen()"></td>
+                        <td><input type="button" value="ABS" onclick="modul()"></td>
+                        <td><input type="button" value="SQRT" onclick="koren()"></td>
+                        <td><input type="button" value="exp" onclick="exponent()"></td>
+                    </tr>
+                    
+                    <!-- Логарифмы и тригонометрия -->
+                    <tr align="center">
+                        <td><input type="button" value="ln" onclick="logarifm()"></td>
+                        <td><input type="button" value="sin" onclick="sinus()"></td>
+                        <td><input type="button" value="cos" onclick="cosinus()"></td>
+                        <td><input type="button" value="tg" onclick="tangens()"></td>
+                    </tr>
+                    <tr align="center">
+                        <td><input type="button" value="ctg" onclick="cotangens()"></td>
+                        <td><input type="button" value="Точность" onclick="tochnost()"></td>
+                        <td><input type="button" value="CE" onclick="steer()"></td>
+                        <td><input type="button" value="Очистить" type="reset"></td>
+                    </tr>
+                    
+                    <!-- Округление -->
+                    <tr align="center">
+                        <td><input type="button" value="ceil" onclick="okruglverh()"></td>
+                        <td><input type="button" value="floor" onclick="okruglvniz()"></td>
+                        <td><input type="button" value="round" onclick="okrugl()"></td>
+                        <td><input type="button" value="Закрыть" onclick="window.close()"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div id="footer">
+            &copy; 2024 Иванов Иван Иванович
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
