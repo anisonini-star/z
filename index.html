@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Иванов Иван Иванович">
-    <meta name="keywords" content="лабораторная, блочная верстка, сайт, html, css, javascript">
+    <meta name="keywords" content="лабораторная, блочная верстка, сайт, html, css, javascript, dom">
     <meta name="description" content="Мой первый простой сайт, созданный с использованием блочной компоновки">
-    <meta http-equiv="content-type" content="text/html">
     <title>Мой первый простой сайт</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <script type="text/javascript">
+        function colors() {
+            // получаем массив на элементы с именем D1 и берем первый из них (наш список)
+            var color = document.getElementsByName('D1')[0];
+            // с помощью стиля меняем цвет фона страницы на выбранный
+            document.body.style.backgroundColor = color.value;
+            // получаем массив всех элементов списка
+            var opt = document.getElementsByTagName('option');
+            // получаем текст элемента массива с номером, выбранным в списке
+            var text = opt[color.selectedIndex].innerHTML;
+            // получаем ссылку на первый элемент в массиве заголовков h3
+            var h3 = document.getElementsByTagName('h3')[0];
+            // в заголовке показываем новый цвет фона
+            h3.innerHTML = 'Текущий цвет - ' + text;
+        }
+    </script>
 </head>
 <body>
 
@@ -26,6 +42,9 @@
                 <li><a href="secret.html">Секретная страница</a></li>
                 <li><a href="sum.html">Сумматор</a></li>
                 <li><a href="calculator.html">Web-калькулятор</a></li>
+                <li><a href="dom.html">Работа с DOM</a></li>
+                <li><a href="spoyler.html">Спойлер</a></li>
+                <li><a href="table.html">Таблица</a></li>
             </ul>
             <h2>Ссылки</h2>
             <ul>
@@ -40,20 +59,28 @@
                 <div align="right"><input name="pwd" type="password"></div>
                 <div align="right"><input name="ok" type="submit" value="Войти"></div>
             </form>
+            <p><input type="button" class="button" value="Регистрация" onclick="register()"></p>
         </div>
         
         <div id="right">
+            <h3>Текущий цвет - красный</h3>
+            <p>Выберите цвет фона страницы:</p>
+            <select name="D1" onchange="colors()">
+                <option value="#FFAAA4" selected>красный</option>
+                <option value="#82FFA2">зеленый</option>
+                <option value="#91C8FF">голубой</option>
+                <option value="#F5F5DC">желтый</option>
+            </select>
+            
             <h2>Добро пожаловать!</h2>
-            <p>Это главная страница моего первого простого сайта, созданная с использованием <strong>блочной компоновки</strong>.</p>
-            <p>В рамках лабораторной работы №5 мы добавили:</p>
+            <p>Это главная страница моего первого простого сайта. В рамках лабораторной работы №6 мы добавили:</p>
             <ul>
-                <li><strong>Секретную страницу</strong> с защитой паролем</li>
-                <li><strong>Сумматор</strong> для сложения двух чисел</li>
-                <li><strong>Web-калькулятор</strong> с математическими функциями</li>
-                <li><strong>Работу с новыми окнами</strong> (контакты открываются в новом окне)</li>
-                <li><strong>Вынос JavaScript-кода</strong> в отдельный файл script.js</li>
+                <li><strong>Выбор цвета фона</strong> с помощью выпадающего списка</li>
+                <li><strong>Страницу для работы с DOM</strong> (изменение абзацев, списков, тегов span)</li>
+                <li><strong>Спойлер</strong> (скрываемый блок с текстом)</li>
+                <li><strong>Таблицу</strong> с вычислением сумм и подсветкой строк</li>
+                <li><strong>Модальное окно</strong> для регистрации</li>
             </ul>
-            <p>Используйте навигационное меню для перехода по разделам сайта.</p>
         </div>
         
         <div style="clear: both;"></div>
@@ -63,6 +90,46 @@
         </div>
     </div>
 </div>
+
+<!-- Модальное окно для регистрации -->
+<div id="modal">
+    <form action="" method="get" name="form1">
+        <table border="0" width="100%">
+            <tr align="center">
+                <td colspan="2"><h3>Регистрация</h3></td>
+            </tr>
+            <tr>
+                <td>Логин:</td>
+                <td><input name="login" type="text"></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td><input name="password" type="password"></td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td><input name="email" type="text"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="button" class="button" onclick="post()" value="Записать"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script type="text/javascript">
+    function register() {
+        var modal = document.getElementById('modal');
+        modal.style.display = 'block';
+    }
+    
+    function post() {
+        var modal = document.getElementById('modal');
+        // Здесь может быть код обработки введенной информации
+        alert('Спасибо за регистрацию!');
+        modal.style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
