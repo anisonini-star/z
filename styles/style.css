@@ -105,7 +105,8 @@ body {
     padding: 2px;
 }
 
-#left input[type="submit"] {
+#left input[type="submit"],
+.left-button {
     padding: 2px 10px;
     background-color: #2a79bc;
     color: white;
@@ -134,6 +135,12 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+#right h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #2a79bc;
+}
+
 #right p {
     margin: 10px 0;
 }
@@ -146,9 +153,9 @@ body {
     margin: 5px 0;
 }
 
-/* Стили для таблиц калькулятора */
+/* Стили для таблицы */
 #right table {
-    margin: 20px auto;
+    margin: 10px 0;
     border-collapse: collapse;
 }
 
@@ -157,43 +164,4 @@ body {
     text-align: center;
 }
 
-#right input[type="button"] {
-    padding: 5px 10px;
-    background-color: #2a79bc;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-#right input[type="button"]:hover {
-    background-color: #1a5a8c;
-}
-
-#right input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-/* Подвал */
-#footer {
-    text-align: center;
-    font-size: 11px;
-    color: #0047ab;
-    margin-top: 20px;
-    border-top: 1px dotted #0047ab;
-    padding: 10px 0;
-    clear: both;
-}
-
-/* Общие стили для ссылок */
-a {
-    text-decoration: none;
-    color: #4682B4;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #2a52be;
-}
+#right input
